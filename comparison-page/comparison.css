@@ -1,0 +1,15 @@
+a, p, ul, li, header, h1, html, body {
+    all: unset;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}

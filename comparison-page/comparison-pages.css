@@ -4,7 +4,7 @@
     --sec-color: #364577; 
     --text-gray: #757575; /*4.5:1*/ /*-white-*/
 
-    --menu-width: 180px;
+    --menu-width: 175px;
     --header-height: 100px;
 
 }
@@ -17,7 +17,7 @@ a, p, ul, li, header, h1 {
     display: flex;
     flex-direction: row;
 }
-.menu > input { order: 2; }
+.menu input { order: 2; }
 .menu ul { order: 1; }
 
 html {
@@ -98,12 +98,12 @@ input::before {
     background-color: var(--prim-color);
 }
 
-#menu-btn:checked::before {
+input:checked::before {
     content: ">";
     background-color: var(--prim-color-AA);
 }
 
-#menu-btn:checked ~ .links {
+input:checked ~ .links {
     margin-left: calc(var(--menu-width) - 2 * var(--menu-width));
 }
 
