@@ -1,16 +1,18 @@
 :root {
+    --prim-color: #f3976c;
     --prim-color-AA: #D3460D; /*4.5:1*/ /*-white-*/
     --sec-color: #364577; 
     --text-gray: #757575; /*4.5:1*/ /*-white-*/
 
     --menu-width: 175px;
-    --header-height: 46px;
+    --header-height: 100px;
 
 }
 
-a, p, ul, li, header {
+a, p, ul, li, header, h1 {
     all: unset;
 }
+
 .container, .menu {
     display: flex;
     flex-direction: row;
@@ -21,17 +23,27 @@ a, p, ul, li, header {
 html {
     height: 100%;
     box-sizing: border-box;
+    margin: 0px;
 } 
 
 body {
-    height: calc(100% - var(--header-height));
-    margin: 2px;
+    height: calc(100% - 2px);
+    margin: 0px;
+}
+
+main {
+    margin: 0px 2px;
 }
 
 h1 {
+    font-size: 32px;
+    font-weight: bolder;
+    display: block;
     height: var(--header-height);
     text-align: center;
     line-height: var(--header-height);
+    color: white;
+    background-color: var(--sec-color)!important;
 }
 
 .container {
@@ -82,12 +94,12 @@ input::before {
     color: white;
     height: 25px;
     width: 25px;
-    background-color: var(--prim-color-AA);
+    background-color: var(--prim-color);
 }
 
 input:checked::before {
     content: ">";
-    background-color: var(--sec-color);
+    background-color: var(--prim-color-AA);
 }
 
 input:checked ~ .links {
